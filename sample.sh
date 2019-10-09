@@ -9,19 +9,19 @@ echo ...And filter files based on sizes
 ./filter.sh
 
 echo ...Now, filter files based on first bytes
-./first_bytes.sh
+./checksum.sh first
 ./filter.sh
 
 echo ...Now, filter files based on last bytes
-./last_bytes.sh
+./checksum.sh last
 ./filter.sh
 
 echo ...Now, filter files based on middle bytes
-./middle_bytes.sh
+./checksum.sh middle
 ./filter.sh
 
 echo ...Now, filter files based on checksums
-./checksum.sh
+./checksum.sh all
 ./filter.sh
 
 echo ...Now, hardlink similar files

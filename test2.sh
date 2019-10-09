@@ -18,20 +18,20 @@ echo ...First, init the database
 echo ...Now, search for files
 ./search.sh test
 
-echo ...Now, filter files based on first bytes
-./first_bytes.sh
+echo ...Now, checksum first bytes
+./checksum.sh first
 ./filter.sh
 
-echo ...Now, filter files based on middle bytes
-./middle_bytes.sh
+echo ...Now, checksum middle bytes
+./checksum.sh middle
 ./filter.sh
 
-echo ...Now, filter files based on last bytes
-./last_bytes.sh
+echo ...Now, checksum last bytes
+./checksum.sh last
 ./filter.sh
 
-echo ...Now, filter files based on checksums
-./checksum.sh
+echo ...Now, checksum whole files
+./checksum.sh all
 ./filter.sh
 
 echo ...Now, hardlink similar files
