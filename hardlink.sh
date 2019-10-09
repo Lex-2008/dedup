@@ -6,7 +6,7 @@ test -z "$DB"  && DB=dedup.db
 
 SQLITE="sqlite3 $DB"
 
-sql="SELECT group_concat(filename,'|') FROM main GROUP BY checksum;"
+sql="SELECT group_concat(filenames.filename,'|') FROM main, filenames USING (inode) GROUP BY checksum;"
 
 cmd="	while test \$# -ge 1; do
 		files=\"\$(echo \"\$1\" | tr '|' '\\n' | sort)\"
